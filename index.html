@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  class="scroll-smooth selection:text-green-400 selection:bg-slate-800 relative">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +8,36 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./fontawesome/all.css" />
   </head>
-  <body dir="rtl"></body>
+  <body>
+    <header class="text-center my-8">
+      <p class="text-4xl text-[#9333ea]">TodoList</p>
+    </header>
+
+    <form class="form flex w-full justify-center items-center mt-20 phone:flex-col phone:px-2 phone:mt-10">
+      <input
+        placeholder="what's your plan ?"
+        type="text"
+        class="todo-input px-4 py-2 w-1/3 phone:w-full rounded outline-none text-[#9333ea] text-xl border-b border-[#9333ea] hover:shadow phone:text-sm" />
+      <button
+        type="submit"
+        class="todo-button flex justify-center items-center mx-4 phone:my-4">
+        <i
+          class="fas fa-plus-square text-5xl text-[#9333ea] hover:text-green-400 transition-all duration-300 rounded-[100px] w-full"></i>
+      </button>
+      <div class="select ml-12 mb-1 phone:m-0">
+        <select
+          name="todos"
+          class="filter-todo px-2 outline-none phone:text-base hover:scale-105 transition-all duration-300">
+          <option value="all">all</option>
+          <option value="completed">completed</option>
+          <option value="uncompleted">uncompleted</option>
+        </select>
+      </div>
+    </form>
+    <div
+      class="todo-container w-1/2 phone:w-[90%] mx-auto mt-20 bg-purple-500 rounded-[50%]">
+      <ul class="todo-list"></ul>
+    </div>
+  </body>
   <script src="./script.js"></script>
 </html>
